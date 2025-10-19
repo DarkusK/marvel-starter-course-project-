@@ -1,70 +1,173 @@
-# Getting Started with Create React App
+# 🦸‍♂️ Marvel Information Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Информационный портал о персонажах и комиксах Marvel, построенный на React.
 
-## Available Scripts
+![Marvel](https://img.shields.io/badge/Marvel-DC143C?style=for-the-badge&logo=marvel&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![SASS](https://img.shields.io/badge/SASS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 
-In the project directory, you can run:
+## 📋 Описание
 
-### `yarn start`
+Marvel Information Portal - это веб-приложение, которое предоставляет информацию о персонажах и комиксах вселенной Marvel. Пользователи могут просматривать детальную информацию о героях, их комиксах, а также изучать различные истории из мира Marvel.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## ✨ Основные возможности
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- 🔍 **Просмотр персонажей Marvel** - детальная информация о героях
+- 📚 **Коллекция комиксов** - каталог комиксов с описаниями
+- 🎲 **Случайный персонаж** - функция для изучения случайных героев
+- 📱 **Адаптивный дизайн** - работает на всех устройствах
+- ⚡ **Быстрая загрузка** - оптимизированная производительность
+- 🛡️ **Обработка ошибок** - Error Boundary для стабильной работы
 
-### `yarn test`
+## 🚀 Технологии
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React 18.3.1** - основной фреймворк
+- **React Router DOM 5.3.4** - маршрутизация
+- **SASS** - препроцессор CSS
+- **Marvel API** - источник данных
+- **PropTypes** - проверка типов
 
-### `yarn build`
+## 📦 Установка и запуск
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Предварительные требования
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js (версия 14 или выше)
+- npm или yarn
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Установка
 
-### `yarn eject`
+1. Клонируйте репозиторий:
+```bash
+git clone https://github.com/DarkusK/marvel-starter-course-project-.git
+cd marvel-starter-course-project-
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Установите зависимости:
+```bash
+npm install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Запустите приложение в режиме разработки:
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Приложение откроется в браузере по адресу [http://localhost:3000](http://localhost:3000)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Другие команды
 
-## Learn More
+```bash
+# Сборка для продакшена
+npm run build
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Запуск тестов
+npm test
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Извлечение конфигурации (необратимо)
+npm run eject
+```
 
-### Code Splitting
+## 🏗️ Структура проекта
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+src/
+├── components/           # React компоненты
+│   ├── app/             # Главный компонент приложения
+│   ├── appHeader/       # Шапка сайта с навигацией
+│   ├── appBanner/       # Баннер для страниц
+│   ├── charInfo/        # Информация о персонаже
+│   ├── charList/        # Список персонажей
+│   ├── comicsList/      # Список комиксов
+│   ├── errorBoundary/   # Обработка ошибок
+│   ├── errorMessage/    # Сообщения об ошибках
+│   ├── pages/           # Страницы приложения
+│   ├── randomChar/      # Случайный персонаж
+│   ├── singleComic/     # Отдельный комикс
+│   ├── skeleton/        # Skeleton загрузка
+│   └── spinner/         # Спиннер загрузки
+├── services/            # API сервисы
+│   └── MarvelService.js # Сервис для работы с Marvel API
+├── resources/           # Ресурсы (изображения)
+│   └── img/            # Изображения персонажей и логотипы
+└── style/              # Глобальные стили
+    ├── style.scss      # Основные стили
+    ├── variables.scss  # SASS переменные
+    └── button.scss     # Стили кнопок
+```
 
-### Analyzing the Bundle Size
+## 🎯 Основные компоненты
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### App.js
+Главный компонент приложения с маршрутизацией между страницами.
 
-### Making a Progressive Web App
+### MainPage
+Главная страница с:
+- Случайным персонажем
+- Списком персонажей
+- Детальной информацией о выбранном персонаже
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### ComicsPage
+Страница с каталогом комиксов Marvel.
 
-### Advanced Configuration
+### MarvelService
+Сервис для работы с Marvel API:
+- Получение списка персонажей
+- Получение информации о персонаже
+- Получение списка комиксов
+- Трансформация данных API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🎨 Дизайн
 
-### Deployment
+Приложение использует:
+- **SASS** для стилизации
+- **Адаптивный дизайн** для всех устройств
+- **Современный UI/UX** в стиле Marvel
+- **Skeleton loading** для улучшения UX
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🔧 API
 
-### `yarn build` fails to minify
+Проект использует Marvel API для получения данных:
+- **Base URL**: `https://marvel-server-zeta.vercel.app/`
+- **Endpoints**: 
+  - `/characters` - список персонажей
+  - `/characters/{id}` - информация о персонаже
+  - `/comics` - список комиксов
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🚀 Развертывание
+
+Для развертывания приложения:
+
+1. Соберите проект:
+```bash
+npm run build
+```
+
+2. Загрузите содержимое папки `build/` на ваш веб-сервер.
+
+## 🤝 Вклад в проект
+
+1. Форкните репозиторий
+2. Создайте ветку для новой функции (`git checkout -b feature/AmazingFeature`)
+3. Зафиксируйте изменения (`git commit -m 'Add some AmazingFeature'`)
+4. Отправьте в ветку (`git push origin feature/AmazingFeature`)
+5. Откройте Pull Request
+
+## 📝 Лицензия
+
+Этот проект создан в образовательных целях.
+
+## 👨‍💻 Автор
+
+**DarkusK**
+- GitHub: [@DarkusK](https://github.com/DarkusK)
+
+## 🙏 Благодарности
+
+- Marvel за предоставление API
+- React команде за отличный фреймворк
+- Сообществу разработчиков за вдохновение
+
+---
+
+⭐ Если вам понравился проект, поставьте звезду!
