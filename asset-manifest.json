@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/marvel-starter-course-project-/static/css/main.21ff3387.css",
+    "main.js": "/marvel-starter-course-project-/static/js/main.da7da7bb.js",
+    "static/media/vision.png": "/marvel-starter-course-project-/static/media/vision.067d4ae1936d64a577ce.png",
+    "static/media/mjolnir.png": "/marvel-starter-course-project-/static/media/mjolnir.61f31e1809f12183a524.png",
+    "static/media/Avengers.png": "/marvel-starter-course-project-/static/media/Avengers.4065c8f9c94e3d8b039a.png",
+    "static/media/error.gif": "/marvel-starter-course-project-/static/media/error.42292aa12b6bc303ce99.gif",
+    "static/media/Avengers_logo.png": "/marvel-starter-course-project-/static/media/Avengers_logo.9eaf219344d83362e830.png",
+    "index.html": "/marvel-starter-course-project-/index.html",
+    "main.21ff3387.css.map": "/marvel-starter-course-project-/static/css/main.21ff3387.css.map",
+    "main.da7da7bb.js.map": "/marvel-starter-course-project-/static/js/main.da7da7bb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.21ff3387.css",
+    "static/js/main.da7da7bb.js"
+  ]
+}
