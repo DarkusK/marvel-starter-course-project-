@@ -23,6 +23,10 @@ const useMarvelService = ()=> {
         const res = await request(`${_apiBase}comics?limit=8&offset=${offset}&apikey=${_apiKey}`)
         return res.data.results.map(_transformComics);
     }
+    const getComic = async (id) => {
+		const res = await request(`${_apiBase}comics/${id}?apikey=${_apiKey}`);
+		return _transformComics(res.data.results[0]);
+	};
       const _transformCharacter = (char) => {
             const thumbnail = char.thumbnail ? char.thumbnail.path + '.' + char.thumbnail.extension : 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg';
             return {
@@ -57,8 +61,8 @@ const useMarvelService = ()=> {
 		clearError,
 		getAllCharacters,
 		getCharacter,
-        // getComics
-		 getAllComics,
+        getComic,
+		getAllComics,
 		
 	};
 }
